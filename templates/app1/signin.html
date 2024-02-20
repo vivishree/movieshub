@@ -1,0 +1,73 @@
+{% extends 'app1/base.html' %}
+
+{% block content %}
+<style>
+    body {
+        background-color: plum;
+        font-family: 'Playfair Display';
+
+    }
+    
+    /* Add your CSS styles here */
+    form {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: peachpuff;
+    }
+
+    h2 {
+        color: #333;
+        text-align: center;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    button {
+        background-color: purple;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-left: 70%;
+    }
+
+    button:hover {
+        background-color: plum;
+    }
+
+    /* Add more styles as needed */
+    .error-message {
+        color: brown;
+        margin-top: 5px;
+    }
+</style>
+
+   <h2 style=" color:  brown;">SignUp Page</h2>
+   <form method="post">
+
+      {% csrf_token %}
+      {% for field in form  %}
+        <p>
+            {{field.label_tag}}
+            {{field}}
+            {% for error in field.errors %}
+            <p class="error-message">{{error}}</p>
+                 {% endfor %}
+        </p>
+      {% endfor %}
+     <button type="submit" class="btn btn-success">SignUp</button>
+   </form>
+{% endblock %}

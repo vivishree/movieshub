@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" >
+
+ 
+    <title>MOVIES HUB</title>
+    <style>
+        .movie-list-item-title{
+            font-family: 'Playfair Display', serif; 
+            color:#060404             
+        }
+        .movie-title{
+            font-family: 'Playfair Display', serif; 
+            color:#060404
+        }
+        .movie-list-items-desc{
+            font-family: 'Playfair Display', serif; 
+            color:#030202
+        }
+        .movie-list-item-btn{
+            font-family: 'Playfair Display', serif; 
+            color:#060303
+        }
+    </style>
+
+</head>
+<body style=" background-color: rgb(225, 120, 225);  --secondary-color:black;">
+    <div style="  background-color:  rgb(225, 120, 225); " class="navbar">
+        <div class="navbar-container">
+            <div class="logo-container"><h1 class="logo">movieshub</h1></div>
+            <div class="menu-container">
+                <ul class="menu-list">
+                    <li class=" menu-list-item"><a href="#" style="text-decoration:none;color:black;" >Home</a></li>
+                    <li class="menu-list-item"><a  href="#movie" style="text-decoration:none;color:black;" >Movies</a></li>
+                    <li class=" menu-list-item"><a href="#series" style="text-decoration:none;color:black;" >Series</a></li>
+                    <li class=" menu-list-item"><a href="#popular" style="text-decoration:none;color:black;" >Popular</a></li>
+                    <li class=" menu-list-item"><a href="#trend" style="text-decoration:none;color:black;" >Trends</a></li>
+                </ul>
+
+
+
+            </div>
+            <div class="profile-container">
+                <a href="/plus/home/"><button style="width: 120%;height: 35px;margin-left: 60%;border-radius: 30px;"  >Profile</button>
+            
+            </div>
+        </div>
+    </div>
+    <div class="sidebar">
+        <i><a href="/home/"><img class="left-menu-icon-home" src="{% static 'images/img/home.png' %}" alt=""></a></i>
+        <i><a href="/about/"><img class="left-menu-icon"  src="{% static 'images/img/about.png' %}" alt=""></a></i>
+        <i><a href="/plus/"><img class="left-menu-icon"  src="{% static 'images/img/pluss.png' %}" alt=""></a></i>
+        
+    </div>
+
+    <div class="container">
+        <div   class="content-container">
+            <div style="height: 157%;"  class="mySlides">
+                <div class="featured-content"  style="background-image: url(static/images/img/maddy1.jpg);  background-repeat: no-repeat;background-size: cover; opacity: .8; ">
+                    <H1 style="font-family: 'Playfair Display', serif;">YAAVARUM NALAM</H1>
+                    <p style="font-family: 'Playfair Display', serif;" class="featured-desc">The story revolves around a family who owns a possessed television set. Things change when it starts showing the future of the family through a TV series by name 'Yaavarum Nalam'.</p>
+                    <a style="font-family: 'Playfair Display', serif;" href="/yaavarum/"><button class="featured-btn">WATCH NOW</button></a>
+                </div>
+            </div>
+    
+            <div class="mySlides">
+                <div class="featured-content" style="background-image: url(static/images/img/nadigayarthilagam.jpg);background-repeat: no-repeat; background-size: cover; opacity: .8;">
+                    <h1 style="font-family: 'Playfair Display', serif;">NADIGAYAR THILAGAM</h1>
+                    <p style="font-family: 'Playfair Display', serif;" class="featured-desc">Story In Detailed Nadigaiyar Thilagam is an biopic on the yesteryear legendary actress and the plot is known to the audiences beforehand. The movie starts with a suicide attempt by Savitri (Keerthi Suresh) who slips into a coma.</p>
+                    <a href="/nadi/"><button class="featured-btn">WATCH NOW</button></a>
+                </div>
+            </div>
+    
+            <div class="mySlides">
+                <div class="featured-content" style="background-image: url(static/images/img/sarkar.webp);background-repeat: no-repeat; background-size: cover; opacity: .8;">
+                    <H1 style="font-family: 'Playfair Display', serif;">SARKAR</H1>
+                    <p class="featured-desc">Sundar Ramaswamy is a highly successful non-resident Indian businessman based in the United States. He arrives in Chennai to cast his vote in the Tamil Nadu Legislative Assembly election. However, he finds out that someone else had already voted in his name. When he decides to investigate the matter, he finds himself pitted against two corrupt politicians. </p>
+                <a style="font-family: 'Playfair Display', serif;" href="/sark/"><button class="featured-btn">WATCH NOW</button></a>
+                </div>
+            </div>
+    
+            <div class="mySlides">
+                <div class="featured-content" style="background-image: url(static/images/img/kala.jpg); background-repeat: no-repeat; background-size: cover; opacity: .8;">
+                    <H1>KALAKALAPPU 2</H1>
+                    <p class="featured-desc">Kalakalappu 2 is a Tamil comedy, romance movie written and directed by Sundar C. The movie features Jiiva, Jai, Shiva, Nikki Galrani and Catherine Tresa in the lead roles. The movie is produced by Kushboo under Avni production and this movie is a sequel to the 2012 film Kalakalappu.</p>
+                <a href="/kalaa/"><button class="featured-btn">WATCH NOW</button></a>
+                </div>
+            </div>
+    
+            <a class="prev" onclick="plusSlides(-1)"><button>&#10094;</button></a>
+            <a style="margin-left: 95%;" class="next" onclick="plusSlides(1)"><button>&#10095;</button></a>
+        </div>
+    </div>
+    
+    <div id="Trend" style="background-color:plum;" class="movie-container">
+
+        <div class="movie-list-wrapper">
+            <h1  id="trend" class="movie-title">Trend</h1>
+            <div  class="movies-list">
+                <div  class="movie-list-items">
+                    <img class="movie-list-img" src="{% static 'images/img/Leo.jpg' %}" alt="" >
+                    <span  class="movie-list-item-title">Leo</span>
+                    <p    class="movie-list-items-desc">genrea:action</p>
+                    <button ] class="movie-list-item-btn">WATCH</button>
+                </div>
+                <div class="movie-list-items">
+                    <img class="movie-list-img" src="{% static 'images/img/label.jpg' %}" alt="" >
+                    <span   class="movie-list-item-title">Label</span>
+                    <p   class="movie-list-items-desc">genrea:thriller </p>
+                    <button    class="movie-list-item-btn">WATCH</button>
+                </div>
+                <div class="movie-list-items">
+                    <img class="movie-list-img" src="{% static 'images/img/Maamannan.jpg' %}" alt="" >
+                    <span    class="movie-list-item-title">Maamannan</span>
+                    <p    class="movie-list-items-desc">genrea:action </p>
+                    <button   class="movie-list-item-btn">WATCH</button>
+                </div>
+                <div class="movie-list-items">
+                    <img class="movie-list-img" src="{% static 'images/img/vikram.jpg' %}" alt="" >
+                    <span    class="movie-list-item-title">Vikram</span>
+                    <p   class="movie-list-items-desc">genrea:action </p>
+                    <button   class="movie-list-item-btn">WATCH</button>
+                </div>
+                <div class="movie-list-items">
+                    <img class="movie-list-img" src="{% static 'images/img/lovetoday.jpg' %}" alt="" >
+                    <span   class="movie-list-item-title">Love Today</span>
+                    <p class="movie-list-items-desc">genrea:Romance </p>
+                    <button class="movie-list-item-btn">WATCH</button>
+                </div>
+                <div class="movie-list-items">
+                    <img class="movie-list-img" src="{% static 'images/img/kushi.jpg' %}" alt="" >
+                    <span    class="movie-list-item-title">Kushi</span>
+                    <p   class="movie-list-items-desc">genrea:Romance </p>
+                    <button    class="movie-list-item-btn">WATCH</button>
+                </div>
+                <div class="movie-list-items">
+                    <img class="movie-list-img" src="{% static 'images/img/TheeraKadhal.jpg' %}" alt="" >
+                    <span   class="movie-list-item-title">Theera Kadhal</span>
+                    <p    class="movie-list-items-desc">genrea:Romance </p>
+                    <button class="movie-list-item-btn">WATCH</button>
+                </div>
+                <div class="movie-list-items">
+                    <img class="movie-list-img" src="{% static 'images/img/nitham.webp' %}" alt="" >
+                    <span  style="font-family: 'Playfair Display', serif;" 
+                   class="movie-list-item-title">Nitham Oru Vaanam</span>
+                    <p    class="movie-list-items-desc">genrea:Romance </p>
+                    <button  class="movie-list-item-btn">WATCH</button>
+                </div>
+
+            </div> 
+            <i ><img alt="Arrow"  style="margin-top: 40px;margin-left: 96%;width: 50px;display: inline-block;"  class="arrow" src="{% static 'images/img/blacky.png' %}" ></i>
+        </div>
+      
+        <div id="movies" class="movie-list-wrapper">
+            <h1 id="movie" class="movie-title">Movies</h1>
+            <div  class="movies-list" id = "moviesList">
+                <div class="movie-list-items">
+                    <img class="movie-list-img" src="{% static 'images/img/thuppakki.jpg' %}" alt="" >
+                    <span class="movie-list-item-title">Thuppaakki</span>
+                    <p class="movie-list-items-desc">genrea:action</p>
+                    <button class="movie-list-item-btn">WATCH</button>
+                </div>
+                <div class="movie-list-items">
+                    <img class="movie-list-img" src="{% static 'images/img/Aranmanai.jpg' %}" alt="" >
+                    <span class="movie-list-item-title">Aranmanai</span>
+                    <p class="movie-list-items-desc">genrea:Horror </p>
+                    <button class="movie-list-item-btn">WATCH</button>
+                </div>
+                <div class="movie-list-items">
+                    <img class="movie-list-img" src="{% static 'images/img/vishvaroobam.jpg' %}" alt="" >
+                    <span class="movie-list-item-title">Vishwaroobam</span>
+                    <p class="movie-list-items-desc">genrea:action </p>
+                    <button class="movie-list-item-btn">WATCH</button>
+                </div>
+                <div class="movie-list-items">
+                    <img class="movie-list-img" src="{% static 'images/img/chand.jpg' %}" alt="" >
+                    <span class="movie-list-item-title">Chandhramugi</span>
+                    <p class="movie-list-items-desc">genrea:Horror </p>
+                    <button class="movie-list-item-btn">WATCH</button>
+                </div>
+                <div class="movie-list-items">
+                    <img class="movie-list-img" src="{% static 'images/img/raatchasan.jpg' %}" alt="" >
+                    <span class="movie-list-item-title">Raatchasan</span>
+                    <p class="movie-list-items-desc">genrea:Action Thriller </p>
+                    <button class="movie-list-item-btn">WATCH</button>
+                </div>
+                <div class="movie-list-items">
+                    <img class="movie-list-img" src="{% static 'images/img/thegidi.jpg' %}" alt="" >
+                    <span class="movie-list-item-title">Thegidi</span>
+                    <p class="movie-list-items-desc">genrea:action </p>
+                    <button style="margin-left: 30%;" class="movie-list-item-btn">+ My List</button>
+                    <button class="movie-list-item-btn">WATCH</button>
+                </div>
+                <div class="movie-list-items">
+                    <img class="movie-list-img" src="{% static 'images/img/3.jpg' %}" alt="" >
+                    <span class="movie-list-item-title">3</span>
+                    <p class="movie-list-items-desc">genrea:Romance </p>
+                    <button class="movie-list-item-btn">WATCH</button>
+                </div>
+                <div class="movie-list-items">
+                    <img class="movie-list-img" src="{% static 'images/img/Pyaar-Prema-Kaadhal.jpg' %}" alt="" >
+                    <span class="movie-list-item-title">Pyaar Prema Kaadhal</span>
+                    <p class="movie-list-items-desc">genrea:Romance </p>
+                    <button class="movie-list-item-btn">WATCH</button>
+                </div>
+                      </div>
+                      <i ><img alt="Arrow"  style="margin-top: 40px;margin-left: 94%;width: 50px;display: inline-block;"  class="arrow" src="{% static 'images/img/blacky.png' %}" ></i>
+       
+            </div> 
+           
+      
+        
+            <div id="Series" class="movie-list-wrapper">
+                <h1  id="series" class="movie-title">Series</h1>
+                <div class="movies-list">
+                    <div class="movie-list-items">
+                        <img class="movie-list-img" src="{% static 'images/img/triples.webp' %}" alt="" >
+                        <span class="movie-list-item-title">Triples</span>
+                        <p class="movie-list-items-desc">genrea:Comedy,Romance</p>
+                        <button class="movie-list-item-btn">WATCH</button>
+                    </div>
+                    <div class="movie-list-items">
+                        <img class="movie-list-img" src="{% static 'images/img/telecaste.jpg' %}" alt="" >
+                        <span class="movie-list-item-title">Telecaste</span>
+                        <p class="movie-list-items-desc">genrea:Horror </p>
+                        <button class="movie-list-item-btn">WATCH</button>
+                    </div>
+                    <div class="movie-list-items">
+                        <img class="movie-list-img" src="{% static 'images/img/Label.JPG' %}" alt="" >
+                        <span class="movie-list-item-title">Label</span>
+                        <p class="movie-list-items-desc">genrea:action </p>
+                        <button class="movie-list-item-btn">WATCH</button>
+                    </div>
+                    <div class="movie-list-items">
+                        <img class="movie-list-img" src="{% static 'images/img/suzhal.jpg' %}" alt="" >
+                        <span class="movie-list-item-title">Suzhal</span>
+                        <p class="movie-list-items-desc">genrea:Thriller </p>
+                        <button class="movie-list-item-btn">WATCH</button>
+                    </div>
+                    <div class="movie-list-items">
+                        <img class="movie-list-img" src="{% static 'images/img/my3.jpg' %}" alt="" >
+                        <span class="movie-list-item-title">my3</span>
+                        <p class="movie-list-items-desc">genrea:Comedy,Romance </p>
+                        <button class="movie-list-item-btn">WATCH</button>
+                    </div>
+                    <div class="movie-list-items">
+                        <img class="movie-list-img" src="{% static 'images/img/Tamil Rockerz.jpg' %}" alt="" >
+                        <span class="movie-list-item-title">Tamil Rockerz</span>
+                        <p class="movie-list-items-desc">genrea:action </p>
+                        <button class="movie-list-item-btn">WATCH</button>
+                    </div>
+                    <div class="movie-list-items">
+                        <img class="movie-list-img" src="{% static 'images/img/Jhansi.webp' %}" alt="" >
+                        <span class="movie-list-item-title">Jhansi</span>
+                        <p class="movie-list-items-desc">genrea:action Thriller</p>
+                        <button class="movie-list-item-btn">WATCH</button>
+                    </div>
+                    <div class="movie-list-items">
+                        <img class="movie-list-img" src="{% static 'images/img/dairy.jpg' %}" alt="" >
+                        <span class="movie-list-item-title">Dairy</span>
+                        <p class="movie-list-items-desc">genrea:Horror </p>
+                        <button class="movie-list-item-btn">WATCH</button>
+                    </div>
+                 
+    
+                </div> 
+                <i ><img alt="Arrow"  style="margin-top: 40px;margin-left: 94%;width: 50px;display: inline-block;"  class="arrow" src="{% static 'images/img/blacky.png' %}" ></i>
+            </div>
+
+
+
+        <div id="popular"  class="movie-list-wrapper">
+            <h1   class="movie-title">Popular</h1>
+            <div class="movies-list">
+                <div class="movie-list-items">
+                    <img class="movie-list-img" src="{% static 'images/img/alai.jpg' %}" alt="" >
+                    <span class="movie-list-item-title">Alaipaayudhe</span>
+                    <p class="movie-list-items-desc">genrea:Romance</p>
+                    <button class="movie-list-item-btn">WATCH</button>
+                </div>
+                <div style="justify-content: space-between;" class="movie-list-items">
+                    <img class="movie-list-img" src="{% static 'images/img/Thullaadha.jpg' %}" alt="" >
+                    <span class="movie-list-item-title">Thullaadha Manamum Thullum</span>
+                    <p class="movie-list-items-desc">genrea:Romance </p>
+                    <button class="movie-list-item-btn">WATCH</button>
+                </div>
+                <div style="justify-content: space-between;" class="movie-list-items">
+                    <img class="movie-list-img" src="{% static 'images/img/mangatha.jpg' %}" alt="" >
+                    <span class="movie-list-item-title">Mangatha</span>
+                    <p class="movie-list-items-desc">genrea:Action </p>
+                    <button class="movie-list-item-btn">WATCH</button>
+                </div>
+                <div style="justify-content: space-between;" class="movie-list-items">
+                    <img class="movie-list-img" src="{% static 'images/img/ayan.jpg' %}" alt="" >
+                    <span class="movie-list-item-title">Ayan</span>
+                    <p class="movie-list-items-desc">genrea:action </p>
+                    <button class="movie-list-item-btn">WATCH</button>
+                </div>
+                <div style="justify-content: space-between;" class="movie-list-items">
+                    <img class="movie-list-img" src="{% static 'images/img/paruthi.jpg' %}" alt="" >
+                    <span class="movie-list-item-title">Paruthiveeran</span>
+                    <p class="movie-list-items-desc">genrea:action,Romance</p>
+                    <button class="movie-list-item-btn">WATCH</button>
+                </div>
+                <div style="justify-content: space-between;" class="movie-list-items">
+                    <img class="movie-list-img" src="{% static 'images/img/chennai.jpg' %}" alt="" >
+                    <span class="movie-list-item-title">Chennai 600028</span>
+                    <p class="movie-list-items-desc">genrea:Comedy </p>
+                    <button class="movie-list-item-btn">WATCH</button>
+                </div>
+                <div style="justify-content: space-between;" class="movie-list-items">
+                    <img class="movie-list-img" src="{% static 'images/img/DEMONTE.jpg' %}" alt="" >
+                    <span class="movie-list-item-title">Demonte colony</span>
+                    <p class="movie-list-items-desc">Genrea:Horror </p>
+                    <button class="movie-list-item-btn">WATCH</button>
+                </div>
+                <div style="justify-content: space-between;" class="movie-list-items">
+                    <img class="movie-list-img" src="{% static 'images/img/tamil.jpg' %}" alt="" >
+                    <span class="movie-list-item-title">Tamil Padam</span>
+                    <p class="movie-list-items-desc">genrea:Comedy </p>
+                    <button class="movie-list-item-btn">WATCH</button>
+                </div>
+
+            </div> 
+            <i ><img  style="cursor:pointer;margin-top: 40px;margin-left: 94%;width: 50px;display: inline-block;"  class="arrow" src="{% static 'images/img/blacky.png' %}" ></i>
+        </div>
+    
+
+       
+    
+       
+            
+            <div class="cont">
+                <h1 class="h_1">You can contact this website through these media's</h1>
+                <div class ="frame">
+                    <a href="https://www.facebook.com/" class="btn">
+                        <i class="fab fa-facebook-f" style="color: #3b5998;"></i>
+                    </a>
+                    <a href="https://twitter.com/?lang=en-in" class="btn">
+                         <i class="fab fa-twitter" style="color: #00acee;"></i>
+                    </a>
+                    <a href="https://dribbble.com/dribbble" class="btn">
+                        <i class="fab fa-dribbble" style="color: #ea4c89;"></i>
+                    </a>
+                    <a href="https://in.linkedin.com/" class="btn">
+                        <i class="fab fa-linkedin-in" style="color:#0e76a8;"></i>
+                    </a>
+                    <a href="https://getpocket.com/en/" class="btn">
+                        <i class="fab fa-get-pocket" style="color:#ee4056;"></i>
+                    </a>
+                    <a href="https://mail.google.com/mail/u/0/#inbox" class="btn">
+                        <i class="far fa-envelope"></i>
+                    </a>
+                    <br>
+                    <br>
+                    <BR>
+               
+                </div>
+            </div>
+            <!-- Social media buttons go here -->
+      
+    </div>
+    <!-- <div style="  margin-left:3.7%; margin-top: 0%;height:300px;width: 100%;background-color:black;">
+        <div >
+        <ul style="margin-left: 50px;margin-top: 0px; font-family: 'sherif';">
+            <il><h1 style="margin-left:5%; color: whitesmoke;">Policies</h1></il>
+            <il><h4 style="margin-left:5%;color: whitesmoke;">Terms of service</h4></il>
+            <il><h4 style="margin-left:5%;color: whitesmoke;">Advertise</h4></il>
+            <il><h4 style="margin-left:5%;color: whitesmoke;">Terms</h4></il>
+            <il><h4 style="margin-left:5%;color: whitesmoke;">Privacy</h4></il>
+            <il><h4 style="margin-left:5%;color: whitesmoke;">Ethics policy</h4></il>
+            <il><h4 style="margin-left:5%;color: whitesmoke;">Corrections policy</h4></il>
+            <il><h4 style="margin-left:5%;color: whitesmoke;">Owner policy</h4></il>
+            <il><h4 style="margin-left:5%;color: whitesmoke;">Copy rights</h4></il>
+        </ul> 
+       
+        <ul style="font-family: 'sherif';margin-top: -188px;margin-left: 200px;">
+            <il><h1 style="margin-left:15%;color: whitesmoke;">About</h1></il>
+            <il><h4 style="margin-left:15%;color: whitesmoke;">Features</h4></il>
+            <il><h4 style="margin-left:15%;color: whitesmoke;">How to </h4></il>
+            <il><h4 style="margin-left:15%;color: whitesmoke;">About us</h4></il>
+            <il><h4 style="margin-left:15%;color: whitesmoke;">Contact</h4></il>
+            <il><h4 style="margin-left:15%;color: whitesmoke;">Reviews</h4></il>
+            <il><h4 style="margin-left:15%;color: whitesmoke;">Latest updates</h4></il>
+            <il><h4 style="margin-left:15%;color: whitesmoke;">Visite website</h4></il>
+            <il><h4 style="margin-left:15%;color: whitesmoke;">Top movie website</h4></il>
+        </ul> 
+    
+        <ul style="font-family: 'sherif';margin-top: -212px;margin-left: 400px;">
+            <il><h1 style="margin-top:25px;margin-left:20%;color: whitesmoke;">Recommended Websites</h1></il>
+            <il><h4 style="margin-left:20%;color: whitesmoke;">www.Moviesda.com</h4></il>
+            <il><h4 style="margin-left:20%;color: whitesmoke;">www.Tamilrokers.com</h4></il>
+            <il><h4 style="margin-left:20%;color: whitesmoke;">www.Justwatch.com</h4></il>
+            <il><h4 style="margin-left:20%;color: whitesmoke;">www.Hotstar.com</h4></il>
+            <il><h4 style="margin-left:20%;color: whitesmoke;">www.Netflix.com</h4></il>
+            <il><h4 style="margin-left:20%;color: whitesmoke;">www.Primevideos.com</h4></il>
+            <il><h4 style="margin-left:20%;color: whitesmoke;">www.Scener.com</h4></il>
+            <il><h4 style="margin-left:20%;color: whitesmoke;">www.Yidio</h4></il>
+        </ul>
+    
+        <ul style="font-family:'sherif';margin-top: -210px;margin-left: 800px;">
+            <il><h1 style="margin-top:25px;margin-left:40%;color: whitesmoke;">Share</h1></il>
+            <il><h4 style="margin-left:40%;color: whitesmoke;">www.Facebook.com</h4></il>
+            <il><h4 style="margin-left:40%;color: whitesmoke;">www.Youtube.com</h4></il>
+            <il><h4 style="margin-left:40%;color: whitesmoke;">www.Twitter.com</h4></il>
+            <il><h4 style="margin-left:40%;color: whitesmoke;">www.Instagram.com</h4></il>
+            <il><h4 style="margin-left:40%;color: whitesmoke;">www.Linkedin.com</h4></il>
+            <il><h4 style="margin-left:40%;color: whitesmoke;">www.Whatapp.com</h4></il>
+            <il><h4 style="margin-left:40%;color: whitesmoke;">www.Telegram.com</h4></il>
+            <il><h4 style="margin-left:40%;color: whitesmoke;">www.Snapchat.com</h4></il>
+            <il><h4 style="margin-left:40%;color: whitesmoke;">www.Amazon.com</h4></il>
+            
+        </ul>
+ 
+        </div>
+    </div>-->
+    
+
+    <script>
+
+        let slideIndex = 1;
+        showSlides(slideIndex);
+    
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+    
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+    
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+    
+            // If we reach the end, start from the beginning
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+    
+            // If we go before the first slide, go to the last slide
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+    
+            // Hide all slides
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+    
+            // Show the selected slide
+            slides[slideIndex - 1].style.display = "block";
+        }
+        
+   
+    document.addEventListener('DOMContentLoaded', function () {
+        const movieListWrapper = document.getElementById('popular');
+        const movieList = movieListWrapper.querySelector('.movies-list');
+        const items = movieList.querySelectorAll('.movie-list-items');
+        const arrow = movieListWrapper.querySelector('.arrow');
+
+        let currentIndex = 0;
+
+        function showSlides() {
+            const totalItems = items.length;
+
+            // Ensure the currentIndex stays within bounds
+            if (currentIndex >= totalItems) {
+                currentIndex = 0;
+            } else if (currentIndex < 0) {
+                currentIndex = totalItems - 1;
+            }
+
+            const translateValue = -currentIndex * (items[0].offsetWidth + 20); // Adjust for margin
+
+            movieList.style.transform = `translateX(${translateValue}px)`;
+        }
+
+        function plusSlides(n) {
+            currentIndex += n;
+            showSlides();
+        }
+
+        arrow.addEventListener('click', function () {
+            plusSlides(1);
+        });
+
+        showSlides(); // Initial display
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const movieListWrapper = document.getElementById('Series');
+        const movieList = movieListWrapper.querySelector('.movies-list');
+        const items = movieList.querySelectorAll('.movie-list-items');
+        const arrow = movieListWrapper.querySelector('.arrow');
+
+        let currentIndex = 0;
+
+        function showSlides() {
+            const totalItems = items.length;
+
+            // Ensure the currentIndex stays within bounds
+            if (currentIndex >= totalItems) {
+                currentIndex = 0;
+            } else if (currentIndex < 0) {
+                currentIndex = totalItems - 1;
+            }
+
+            const translateValue = -currentIndex * (items[0].offsetWidth + 20); // Adjust for margin
+
+            movieList.style.transform = `translateX(${translateValue}px)`;
+        }
+
+        function plusSlides(n) {
+            currentIndex += n;
+            showSlides();
+        }
+
+        arrow.addEventListener('click', function () {
+            plusSlides(1);
+        });
+
+        showSlides(); // Initial display
+    });
+    
+    document.addEventListener('DOMContentLoaded', function () {
+        const movieListWrapper = document.getElementById('movies');
+        const movieList = movieListWrapper.querySelector('.movies-list');
+        const items = movieList.querySelectorAll('.movie-list-items');
+        const arrow = movieListWrapper.querySelector('.arrow');
+
+        let currentIndex = 0;
+
+        function showSlides() {
+            const totalItems = items.length;
+
+            // Ensure the currentIndex stays within bounds
+            if (currentIndex >= totalItems) {
+                currentIndex = 0;
+            } else if (currentIndex < 0) {
+                currentIndex = totalItems - 1;
+            }
+
+            const translateValue = -currentIndex * (items[0].offsetWidth + 20); // Adjust for margin
+
+            movieList.style.transform = `translateX(${translateValue}px)`;
+        }
+
+        function plusSlides(n) {
+            currentIndex += n;
+            showSlides();
+        }
+
+        arrow.addEventListener('click', function () {
+            plusSlides(1);
+        });
+
+        showSlides(); // Initial display
+    });
+    
+    document.addEventListener('DOMContentLoaded', function () {
+        const movieListWrapper = document.getElementById('Trend');
+        const movieList = movieListWrapper.querySelector('.movies-list');
+        const items = movieList.querySelectorAll('.movie-list-items');
+        const arrow = movieListWrapper.querySelector('.arrow');
+
+        let currentIndex = 0;
+
+        function showSlides() {
+            const totalItems = items.length;
+
+            // Ensure the currentIndex stays within bounds
+            if (currentIndex >= totalItems) {
+                currentIndex = 0;
+            } else if (currentIndex < 0) {
+                currentIndex = totalItems - 1;
+            }
+
+            const translateValue = -currentIndex * (items[0].offsetWidth + 20); // Adjust for margin
+
+            movieList.style.transform = `translateX(${translateValue}px)`;
+        }
+
+        function plusSlides(n) {
+            currentIndex += n;
+            showSlides();
+        }
+
+        arrow.addEventListener('click', function () {
+            plusSlides(1);
+        });
+
+        showSlides(); // Initial display
+    });
+
+
+</script>
+
+</body>
+</html>

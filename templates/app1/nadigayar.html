@@ -1,0 +1,45 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Title - Description</title>
+    <link rel="stylesheet" href="{% static 'css/des.css' %}"> <!-- Link to your CSS file for styling -->
+</head>
+<body>
+
+    <header>
+        <h1 style="color: black;">NADIGAYAR THILAGAM</h1>
+        <p style="font-size:20px;color:  brown;">Genre: Biopic</p>
+    </header>
+
+    <main style="background-color:burlywood;margin-top:25px;" >
+        <section class="movie-details">
+            <img src="{% static 'images/img/nadigayarthilagam.jpg' %}" alt="Movie Poster">
+            <div class="description">
+                <h2>Overview</h2>
+                <p>
+                    Nadigayar Thilagam:Nadigaiyar Thilagam is the Tamil dubbed version of Mahanati, a biopic on the late legendary South actress Savitri. Keerthy Suresh plays the titular role in this Nag Ashwin-directed film, which also stars Dulquer Salmaan as Gemini Ganesan and Samantha as a journalist named Madhuravani.     <h2>Details</h2>
+                <ul>
+                    <li><strong>Release Date:</strong> May 11,  2018 </li>
+                    <li><strong>Director:</strong>  Nag Ashwin Reddy</li>
+                    <li><strong>Cast:</strong> Keerthy Suresh , Dulquer Salmaan , Samantha Akkineni  </li>
+                    <!-- Add more details as needed -->
+                </ul>
+            </div>
+        </section>
+
+        <section class="watch-buttons">
+            <a href="/stree/"><button class="watch-now-btn">Watch Now</button></a>
+           
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 MoviesHub.All rights reserved.</p>
+    </footer>
+
+
+</body>
+</html>

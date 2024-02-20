@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="title1" >{% block title %}DJANGO MYSQL USER AUTHENTICATION - LOGIN, REGISTER AND LOGOUT{% endblock %}</title>
+    {% load static %}
+    <style>
+        body {
+            background-color:  plum;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+        header h1 {
+            color: darkslategrey;
+            text-align: center;
+        }
+        hr {
+            border: 1px solid #ccc;
+            margin-top: 20px;
+        }
+        main {
+            margin-top: 20px;
+        }
+        .message {
+            color: red;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 style="font-family: 'Playfair Display';">Django User Authentication</h1>
+        </header>
+        <hr>
+        <main>
+            {% block content %}
+            
+            {% for message in messages %}
+            <div class="message">{{ message }}</div>
+            {% endfor %}
+            
+            <h1 class="message">Welcome</h1>
+
+          
+            {% endblock  %}
+        </main>
+        <hr>
+    </div>
+</body>
+</html>

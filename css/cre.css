@@ -1,0 +1,83 @@
+*{ 
+    margin: 0; 
+    padding: 0; 
+  }
+  
+  /* Fix navigation to create a sticky nav bar */
+  nav {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    background-color: #1a1a1a;
+    padding: 10 25px; 
+    z-index: 1000; 
+  }
+  
+  nav ul {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    
+   
+  }
+  
+  nav li {
+    display: inline-block;
+
+    color: white;
+     
+    padding: 20px 70px;
+    margin-right: 100px;
+  }
+  
+  nav li:active {
+    background-color: #333333;
+  }
+  
+  nav li:hover {
+    background-color: #333333;
+  }
+  
+  nav button {
+    display: none;
+  }
+  
+  /* make the nav bar adapt to small screen sizes */
+  @media (max-width: 500px) {
+      nav li {
+      display: block;
+        margin: 0;
+        border-bottom: 1px solid white;
+        padding: 10px 0;
+        
+    }
+    nav ul {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    nav {
+      padding: 10px 0 ;
+    }
+  }
+
+  table{
+    margin-top: 7%; 
+    right:  -30dx;
+    
+  }
+  h1{
+    margin-top: 40%;
+    margin-left: 3%;
+    font-family: 'Roboto';
+  
+  }
+  button  {
+    margin-top: 2%;
+    margin-left: 30%;
+    background-color: green;
+    color: whitesmoke;
+    border-radius: 30px;
+    width: 70px;
+    height: 30px;
+  }

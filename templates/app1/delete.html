@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<>, initial-scale=1.0">
+    <title>delete confirmation  page</title>
+    <style>
+
+body {
+            background-color: plum;
+        }
+
+        h1 {
+            color: brown;
+            text-align: center;
+            margin-top: 13%;
+        }
+
+        h2 {
+            color: brown;
+            text-align: center;
+            margin-top: -12px;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        form {
+            margin-right: 10px;
+        }
+
+        button {
+            width: 170px;
+            height: 50px;
+            background-color: purple;
+            color: #fff;
+            text-align: center;
+            border-radius: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Are you sure!</h1><br>
+    <h2>You need to delete this movies data from the database..!</h2>
+
+     <div class="button-container">
+    <form action="{% url 'delete1' delete_id %}" method="POST">
+      
+        <button type="submit" values="confirm">Confirm</button>
+     {% csrf_token%}
+        </form>
+        <a href="/plus/"><button type="button" values="cancle" >Cancle</button></a>
+ 
+  </div>
+</body>
+</html>
+

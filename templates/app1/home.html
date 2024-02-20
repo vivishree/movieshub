@@ -1,0 +1,62 @@
+{% extends 'app1/base.html' %}
+
+{% block title %}Login{% endblock%}
+
+{% block content %}
+<style>
+    body {
+        background-color: plum;
+        font-family: 'Playfair Display';
+
+    }
+    h2 {
+        margin-left:390px;
+        margin-top: 5%;
+        color: #c71e4e;
+        align-items: center;
+       
+    }
+    h3 {
+        margin-left: 380px;
+        color: yellowgreen;
+        
+    }
+    .btn {
+
+        background-color: purple;
+        width: 160px;
+        height: 50px;
+        border-radius: 30px;
+        margin-top: 30px;
+        margin-left: 40%;
+        text-align: center;
+        line-height: 50px;
+        color: #fff;
+        text-decoration: none;
+        display: inline-block;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+    }
+    .btn:hover {
+        background-color: plum ;
+    }
+</style>
+
+{% if user.is_authenticated %}
+
+    <h2>welcome...! Hi {{user.username}} !</h2>
+    <h3>Do you want to Logout? Click Below!</h3>
+    <a href="/plus/logout/" class="btn">Logout</a>
+
+{% else %}
+
+    <h2 style="margin-left: 370px;">If you already have an account..!</h2 ><br><h3 style="margin-left: 280px;"> please click the login button and make the further process...!</h3>
+    <h2 style="margin-left: 370px;">If you are new to this website..!</h2><br> <h3 style="margin-left: 280px;">Please click the signin button and make the further process...!</h3>
+    <a  style="margin-left: 350px;"  href="/plus/log/" class="btn">Login</a>
+    <a style ="margin-left: 20px;" href="/plus/signup/" class="btn">SignUp</a>
+
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,33 @@
+{%load static%}
+<html>
+<head>
+    
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+</head><br>
+<body>
+<!-- html hyperlink-->
+<!-- html hyper internallink-->
+<h1>ANIMATION WORLD</h1>
+<form method="POST">
+    <table>
+        {{ f.as_table }}
+    </table>
+    <input style="color:red" type="submit" values="add student">
+    {% csrf_token %}
+
+    {% include "admission/report.html" %}
+
+    <!-- {% for i in s %}
+        <tr>
+            <td>{{i.id}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.fathername}}</td>
+            <td>{{i.mothername}}</td>
+            
+        </tr>
+    {% endfor%} -->
+
+</form>
+
+</body>
+</html>

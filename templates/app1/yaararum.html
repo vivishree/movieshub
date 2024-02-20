@@ -1,0 +1,46 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Title - Description</title>
+    <link rel="stylesheet" href="{% static 'css/des.css' %}"> <!-- Link to your CSS file for styling -->
+</head>
+<body>
+
+    <header>
+        <h1 style="color: black;">YAAVARUM NALAM</h1>
+        <p style="font-size:20px;color:  brown;">Genre: Horror</p>
+    </header>
+
+    <main style="background-color:burlywood;margin-top:25px;" >
+        <section class="movie-details">
+            <img src="{% static 'images/img/maddy1.jpg' %}" alt="Movie Poster">
+            <div class="description">
+                <h2>Overview</h2>
+                <p>
+                    Yaaravarum Nalam: The story revolves around a family who owns a possessed television set. Things change when it starts showing the future of the family through a TV series by name 'Yaavarum Nalam'           </p>
+                <h2>Details</h2>
+                <ul>
+                    <li><strong>Release Date:</strong> March 6,  2009 </li>
+                    <li><strong>Director:</strong>  Vikram Kumar</li>
+                    <li><strong>Cast:</strong>Madhavan ,Saranya,Neetu Chandra</li>
+                    <!-- Add more details as needed -->
+                </ul>
+            </div>
+        </section>
+
+        <section class="watch-buttons">
+            <a href="/stree/"><button class="watch-now-btn">Watch Now</button></a>
+           
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 MoviesHub.<br> All rights reserved.</p>
+    </footer>
+
+
+</body>
+</html>

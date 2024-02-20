@@ -1,0 +1,47 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Title - Description</title>
+    <link rel="stylesheet" href="{% static 'css/des.css' %}"> <!-- Link to your CSS file for styling -->
+</head>
+<body>
+
+    <header>
+        <h1 style="color: black;">SARKAR</h1>
+        <p style="font-size:20px;color:  brown;">Genre: Action</p>
+    </header>
+
+    <main style="background-color:burlywood;margin-top:25px;" >
+        <section class="movie-details">
+            <img src="{% static 'images/img/sarkar.webp' %}" alt="Movie Poster">
+            <div class="description">
+                <h2>Overview</h2>
+                <p>
+                    Sarkar:Sundar Ramaswamy is a wealthy and ruthless NRI corporate raider in the US, referred to as a corporate monster due to his ruthless business dealings. He arrives in Chennai to cast his vote in the Tamil Nadu Legislative Assembly election. However, he finds that someone else had already voted in his place.</p>    
+                    <h2>Details</h2>   
+                <ul>
+
+                    <li><strong>Release Date:</strong> November 6,  2018 </li>
+                    <li><strong>Director:</strong>A. R. Murugadoss</li>
+                    <li><strong>Cast:</strong> Vijay, Yogi Babu , Keerthy Suresh  </li>
+                    <!-- Add more details as needed -->
+                </ul>
+            </div>
+        </section>
+
+        <section class="watch-buttons">
+            <a href="/stree/"><button class="watch-now-btn">Watch Now</button></a>
+           
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 MoviesHub.All rights reserved.</p>
+    </footer>
+
+
+</body>
+</html>

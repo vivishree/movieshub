@@ -1,0 +1,77 @@
+{% extends 'app1/base.html' %}
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<style>
+    body {
+        /*background-color: #f0f0f0;*/
+        font-family: 'Playfair Display';
+        background-color:  plum;
+    }
+    h2 {
+        margin-top: 20px;
+        margin-left: 45%;
+        color: #333;
+        color:brown;
+    }
+    form {
+        margin-top: 20px;
+        width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: peachpuff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    }
+    .form-group {
+        margin-bottom: 20px;
+    }
+    label {
+        display: block;
+        margin-bottom: 5px;
+        color: #333;
+    }
+    input[type="text"],
+    input[type="password"] {
+        width: calc(100% - 24px);
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        outline: none;
+    }
+    button.btn-primary {
+        background-color: purple;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-left: 60%;
+        transition: background-color 0.3s;
+    }
+    button.btn-primary:hover {
+        background-color: plum;
+    }
+    .msg {
+        margin-top: 10px;
+        color: red;
+    }
+</style>
+
+<h2>Login Page</h2>
+<div class="msg">{{ msg }}</div>
+<form method="post">
+  {% csrf_token %}
+  <div class="form-group">
+    <label for="id_username">Username:</label>
+    {{ form.username }}
+  </div>
+  <div class="form-group">
+    <label for="id_password">Password:</label>
+    {{ form.password }}
+  </div>
+  <button type="submit" class="btn btn-primary">Login</button>
+</form>
+
+{% endblock %}

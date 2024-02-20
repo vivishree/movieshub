@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies list</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/forms.css' %}" >
+    <style>
+
+*{ 
+  margin: 0; 
+  padding: 0; 
+}
+
+/* Fix navigation to create a sticky nav bar */
+nav {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  padding: 10 25px; 
+  z-index: 1000; 
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  margin-left: 90px;
+  text-align: center;
+  
+ 
+}
+
+nav li {
+  display: inline-block;
+  color: white;  
+  padding: 20px 70px;
+  margin-right: 100px;
+}
+
+nav li:active {
+  background-color: #333333;
+}
+
+nav li:hover {
+  background-color: #333333;
+}
+
+nav button {
+  display: none;
+}
+
+/* make the nav bar adapt to small screen sizes */
+@media (max-width: 500px) {
+    nav li {
+    display: block;
+      margin: 0;
+      border-bottom: 1px solid white;
+      padding: 10px 0;
+      
+  }
+  nav ul {
+      display: flex;
+      flex-direction: column;
+  }
+  
+  nav {
+    padding: 10px 0 ;
+  }
+}
+      /* Add space between table headings */
+      table th {
+          padding: 50px;
+          color: black; 
+          border: 2px solid black;
+          box-shadow: #1a1a1a;
+          margin-top: 1%;
+          margin-left: 20px;/* Adjust the padding value as needed */
+      }
+      td, th{
+        border: 2px solid black;
+        padding:  8px;
+        text-align: center;
+      }
+      tr{
+        border: 200px solid black;
+        padding:  100px;
+
+      }
+  </style>
+   
+</head>
+<body>
+    <header style="background-color: plum;">
+        
+        <nav style="background-color: black;width: -40px; height: 58px;">
+          <ul>
+            <li><a  style="text-decoration: none;color: whitesmoke;" href="">HOME</a></li>
+            <li><a  style="text-decoration: none;color: whitesmoke;" href="/plus/home3/">CREATE</a></li>
+          </ul>
+        </nav>
+        <h1 style="color: brown;text-align: center;font-family: serif;margin-top: 4%;">PAGE FOR CRUD OPERATION </h1>
+        <table style="margin-top: 20px;" >
+          <a href="/plus/home3/"><button style="margin-top:-10px;margin-left: 78%;text-decoration: none;color: rgb(250, 244, 244);background-color: green;border-radius: 30px;width: 100px;height: 40px;">Insert</button></a>
+          <tr>
+        
+                <th>S.NO</th>
+                <th>MOVIE NAME</th>
+                <th>DESCRIPTION</th>
+                <th>YEAR OF RELEASE</th>
+                <th>GENRE</th>
+              
+                <th>UPDATE</th>
+                <th>DELETE</th>
+             
+            {% for i in movies1_list %}
+            <tr>
+                <td>{{i.id}}</td>
+                <td>{{i.name}}</td>
+                <td>{{i.desc}}</td>
+                <td>{{i.year}}</td>
+                <td>{{i.genre}}</td>
+               
+
+               
+                <td><a href="{% url 'update1' i.pk %}"><button style="text-decoration: none;color: black;background-color: white;border-radius: 30px;width: 80px;height: 30px;">Update</button></a></td>
+                <td><a href="{% url 'delete1' i.pk %}"><button style="text-decoration: none;color: black;background-color: white;border-radius: 30px;width: 80px;height: 30px;">Delete</button></a></td>
+
+
+            </tr>
+            
+            {% endfor %}
+  
+      </table>
+      <header>
+
+</body>
+</html>

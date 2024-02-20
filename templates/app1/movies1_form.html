@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/cre.css' %}" >
+    <style>
+   
+
+      h1{
+        margin-left: 50px;
+        margin-top: 50PX;
+        color: saddlebrown;
+      }
+      table th {
+          padding: 45px;
+          color: rgb(6, 5, 6); 
+          border: 2px solid black;
+          box-shadow: #1a1a1a;
+          margin-top: 1%;
+          background-color: plum;
+          margin-left: 20px;/* Adjust the padding value as needed */
+      }
+      td, th{
+        border: 2px solid black;
+        padding:  20px;
+        text-align: center;
+      }
+      tr{
+        border: 200px solid black;
+        padding:  100px;
+
+      }
+      input{
+        background-color: black;
+        color:#fff;
+      }
+    </style>
+  
+</head>
+<body >
+    <header>
+        
+        <nav>
+          <ul>
+            <li><a  style="color: floralwhite;text-decoration: none;" href="/plus/">HOME</a></li>
+            <li><a  style="color: floralwhite;text-decoration: none;" href="/plus/">CREATE</a></li>
+          </ul>
+        </nav>
+        <div style="padding:50px 500px">
+        <h1 >Add movie details</h1><br>
+        <form method="post">
+            <table  >
+                {{form.as_table}}
+            </table>
+        <button><input style="background: none;border: 0cap;" type="submit" value="submit"></button>
+        {% csrf_token %}
+        </form>
+       </div>
+      
+      <header>
+
+       
+</body>
+</html>
